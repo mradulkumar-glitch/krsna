@@ -24,12 +24,12 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b main https://mradulkumar-glitch:${{ secrets.GH_TOKEN }}@github.com/mradulkumar-glitch/AutoAnime.git
+           git clone -b main https://mradulkumar-glitch:${{ secrets.GH_TOKEN }}@github.com/mradulkumar-glitch/gdrive.git
        - name: Running Bot 
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           cd AutoAnime
+           cd gdrive
            docker build -t compressor . && docker run compressor
            
        - name: Loop workflow
